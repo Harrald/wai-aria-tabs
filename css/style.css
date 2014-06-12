@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body
+{
+    height: 100%;
+
+    font-family: sans-serif;
+    color: rgba(33, 33, 33, 1);
+    background-color: rgba(246, 246, 246, 1);
+}
+
+#wrapper
+{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+.tablist
+{
+    margin: 0 ;
+    padding: 0;
+    overflow: hidden;
+
+    list-style: none;
+}
+
+
+.tablist .tab
+{
+    float:left;
+}
+
+.tablist .tab [role=tab]
+{
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 5px;
+
+    color: red;
+    background-color: dimgray;
+    text-decoration: none;
+}
+
+.tablist .tab [role=tab]:hover,
+.tablist .tab [role=tab][aria-selected=true]
+{
+    background-color: green;
+}
+
+.tablist .tab [role=tab]:focus
+{
+    outline: groove red 2px;
+    outline-offset: -2px;
+}
+
+
+.tabs-container
+{
+    width: 500px;
+    margin-bottom: 40px;
+}
+
+.tabs-container [role=tabpanel]
+{
+    display: none;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.tabs-container [role=tabpanel].tab-is-selected
+{
+    display: block;
+}
